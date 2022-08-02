@@ -11,3 +11,17 @@ body {
 .carousel-caption {
     text-align: right;
 }
+
+.background-color-navbar {
+    background-color: #835356;
+    padding: 0px;
+}
+
+.background-color-carousel {
+    background-color: #C4AEAF;
+    height: 60em;
+    width: 50px;
+    padding: 100px;
+    margin: 100px;
+    z-index: -0.1;
+}
