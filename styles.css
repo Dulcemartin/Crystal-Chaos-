@@ -4,15 +4,21 @@
 } */
 
 .homepics {
-    padding-left: 10px;
+  padding-left: 10px;
 
 
 }
 
 
+.crystalchaos {
 
+  display: flex;
+  float: right;
 
-===
+}
+
+.para {}
+
 .carousel-caption {
     text-align: right;
 }
@@ -115,4 +121,5 @@ body {
   .demo:hover {
     opacity: 1;
   }
+
 
