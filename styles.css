@@ -4,12 +4,18 @@
 } */
 
 .homepics {
+<<<<<<< HEAD
+    padding-left: 10px;
+=======
   padding-left: 10px;
+>>>>>>> 2b1ab85fb805729782a6fb5a00060b5a0d24eac6
 
 
 }
 
 
+<<<<<<< HEAD
+=======
 .crystalchaos {
 
   display: flex;
@@ -19,6 +25,7 @@
 
 .para {}
 
+>>>>>>> 2b1ab85fb805729782a6fb5a00060b5a0d24eac6
 .carousel-caption {
     text-align: right;
 }
@@ -28,6 +35,10 @@
 body {
     font-family: Arial;
     margin: 75px;
+<<<<<<< HEAD
+    margin-top: 50px;
+=======
+>>>>>>> 2b1ab85fb805729782a6fb5a00060b5a0d24eac6
     padding: 10px;
   }
   
@@ -122,4 +133,7 @@ body {
     opacity: 1;
   }
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 2b1ab85fb805729782a6fb5a00060b5a0d24eac6
