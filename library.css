@@ -1,14 +1,10 @@
 
-body{
-  background-color:  #835356;
-}
-
 * {
   box-sizing: border-box;
 }
 
 body {
-  background-color: #f1f1f1;
+  background-color: #C4AEAF;
   padding: 20px;
   font-family: Arial;
 }
@@ -49,7 +45,8 @@ h1 {
 
 /* Content */
 .content {
-  background-color: white;
+  background-color:whitesmoke;
+
   padding: 10px;
 }
 
