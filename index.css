@@ -38,7 +38,7 @@ header .logo {
 }
 
 .showcase {
-    position: absolute;
+    position: static;
     right: 0;
     width: 100%;
     min-height: 100vh;
@@ -146,8 +146,9 @@ header .logo {
 
 .social li a:hover {
     transform: scale(0.5) translateY(-15px);
-    color: #835356;
+    color: #A58B77;
 }
+
 
 .menu {
     position: absolute;
@@ -193,3 +194,10 @@ header .logo {
         font-size: 2em;
     }
 }
+
+.btm-r {
+    position: static;
+    width: 330px;
+    height: 270px;
+}
+
