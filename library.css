@@ -5,7 +5,7 @@
 
 body {
   background-color: #C4AEAF;
-  padding: 20px;
+  padding: 50px;
   font-family: Arial;
 }
 
@@ -45,9 +45,10 @@ h1 {
 
 /* Content */
 .content {
-  background-color:whitesmoke;
-
+  background-color:white;
   padding: 10px;
+  color: #c8bdce;;
+  opacity 0.5;
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
@@ -62,4 +63,28 @@ h1 {
   .column {
     width: 100%;
   }
+}
+
+.container {
+  position: relative;
+  width: 100%; 
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: rgba(197,147,144,255,)
+  /* rgb(217, 186, 219); */
+
+  
+}
+
+/* .container img {vertical-align: middle;} */
+
+.container .content2 {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 98%;
+  padding: 40px;
 }
