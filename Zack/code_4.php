@@ -55,10 +55,10 @@
             $comment = test_input($_POST["comment"]);
             }
 
-            if (empty($_POST["gender"])) {
-            $superheroErr = "Gender is required";
+            if (empty($_POST["superhero"])) {
+            $superheroErr = "Superhero is required";
             } else {
-            $superhero = test_input($_POST["gender"]);
+            $superhero = test_input($_POST["superhero"]);
             }
             }
 
@@ -100,17 +100,17 @@
 
         <br><br>
 
-        Gender:
+        Superhero:
 
-        <input type="radio" name="gender" <?php if (isset($superhero) && $superhero=="superman") echo "checked";?> value="superman">
+        <input type="radio" name="superhero" <?php if (isset($superhero) && $superhero=="superman") echo "checked";?> value="superman">
 
         Superman
 
-        <input type="radio" name="gender" <?php if (isset($superhero) && $superhero=="wonder women") echo "checked";?> value="wonder women">
+        <input type="radio" name="superhero" <?php if (isset($superhero) && $superhero=="wonder women") echo "checked";?> value="wonder women">
         
         Wonder Women
 
-        <input type="radio" name="gender" <?php if (isset($superhero) && $superhero=="I like marvel") echo "checked";?> value="I like marvel">
+        <input type="radio" name="superhero" <?php if (isset($superhero) && $superhero=="I like marvel") echo "checked";?> value="I like marvel">
         
         Other
 
