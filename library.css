@@ -5,7 +5,7 @@
 
 body {
   background-color: #C4AEAF;
-  padding: 50px;
+  padding: 20px;
   font-family: Arial;
 }
 
@@ -87,4 +87,20 @@ h1 {
   color: #f1f1f1;
   width: 98%;
   padding: 40px;
+}
+
+.intro {
+  background-color: rgb(244, 244, 244) ;
+  color: rgba(0,0,0,.5)!important;
+  margin: auto;
+  padding: 50px;
+  margin: 2%;
+}
+
+.headings {
+
+  color: rgba(0,0,0,.5)!important;
+  text-align: center;
+  padding-top: 3%;
+
 }
