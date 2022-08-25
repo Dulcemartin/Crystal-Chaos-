@@ -1,0 +1,36 @@
+body {
+    background-image: url(./Video_of_Black_Cat.mp4);
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+
+
+}
+
+.form {
+    text-align: center;
+}
+
+.fullscreen {
+    position: absolute;
+    z-index: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    opacity: 0.8;
+
+    &::-webkit-media-controls {
+        display: none !important;
+    }
+}
+
+.bgImage {
+    background-image: url("./Crystal-pictures/Mookaite.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
