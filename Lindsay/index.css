@@ -197,6 +197,23 @@ header .logo {
 
 .btm-r {
     position: static;
-    width: 330px;
-    height: 270px;
+    width: 0px;
+    height: 0px;
+}
+
+
+.footer {
+    text-align: center;
+    background-color: none;
+    padding-top: 0px;
+
+}
+
+.icons {
+    color: rgba(0, 0, 0, .5);
+    font-size: 32px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
