@@ -1,6 +1,8 @@
 body{
-  margin: 0%;
-  background-color:#C4AEAF;
+  margin: 0;
+  border: 0;
+  background-color:#ffffff;
+
 }
 
 .intro {
@@ -20,12 +22,14 @@ body{
   }
   
   .gallery{
-    margin: 20px;
+    margin: 2%;
   }
 
   .container {
     position: relative;
     text-align: center;
+    width: max-content;
+    margin-top: 2%;
   }
   
   /* Bottom right text */
@@ -38,7 +42,7 @@ body{
   }
   
   
-  .intro {
+  /* .intro {
     background-color: rgb(244, 244, 244) ;
     color: rgba(0,0,0,.5)!important;
     padding: 50px;
@@ -46,7 +50,7 @@ body{
     margin-right: 2%;
     margin-left: 2%;
     text-align: justify;
-  }
+  } */
   
   
   .headings {
@@ -67,9 +71,25 @@ body{
 
     background-color: rgb(227, 223, 223) ;
     color: rgba(0,0,0,.5)!important;
-    padding: 2px;
+    padding: 1px;
     text-align: center;
     margin-top: 2px;
     margin-bottom: 20px;
 
   }
+
+  .footer{
+    text-align: center;
+    background-color:white;
+    padding-top: 20px;
+    
+}
+
+.icons{
+  color: rgba(0,0,0,.5);
+ font-size: 32px;
+ padding-top: 20px;
+ padding-bottom: 20px;
+ margin-left: 20px;
+margin-right: 20px;
+}
