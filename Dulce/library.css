@@ -1,90 +1,95 @@
+body{
+  margin: 0;
+  border: 0;
+  background-color:#ffffff;
 
-* {
-  box-sizing: border-box;
 }
 
-body {
-  background-color: #C4AEAF;
-  padding: 50px;
-  font-family: Arial;
-}
-
-/* Center website */
-.main {
-  max-width: 1000px;
-  margin: auto;
-}
-
-h1 {
-  font-size: 50px;
-  word-break: break-all;
-}
-
-.row {
-  margin: 8px -16px;
-}
-
-/* Add padding BETWEEN each column (if you want) */
-.row,
-.row > .column {
-  padding: 8px;
-}
-
-/* Create four equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 25%;
-}
-
-/* Clear floats after rows */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Content */
-.content {
-  background-color:white;
-  padding: 10px;
-  color: #c8bdce;;
-  opacity 0.5;
-}
-
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 900px) {
-  .column {
-    width: 50%;
+.intro {
+    background-color: rgb(244, 244, 244) ;
+    color: rgba(0,0,0,.5)!important;
+    margin: auto;
+    padding: 50px;
+    margin: 2%;
   }
-}
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
-}
-
-.container {
-  position: relative;
-  width: 100%; 
-  margin: 0 auto;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  background-color: rgba(197,147,144,255,)
-  /* rgb(217, 186, 219); */
-
   
+  .headings {
+    color: rgba(0,0,0,.5)!important;
+    text-align: center;
+    padding-top: 3%;
+    font-family: sans-serif;
+  
+  }
+  
+  .gallery{
+    margin: 2%;
+  }
+
+  .container {
+    position: relative;
+    text-align: center;
+    width: max-content;
+    margin-top: 2%;
+  }
+  
+  /* Bottom right text */
+  .text-block {  
+    position:relative;
+    bottom: 0%;
+    background-color: rgba(0,0,0,.5)!important;;
+    color: white;
+    padding: 30px;
+  }
+  
+  
+  /* .intro {
+    background-color: rgb(244, 244, 244) ;
+    color: rgba(0,0,0,.5)!important;
+    padding: 50px;
+    border: 20px;
+    margin-right: 2%;
+    margin-left: 2%;
+    text-align: justify;
+  } */
+  
+  
+  .headings {
+    color: rgba(0,0,0,.5)!important;
+    text-align: center;
+    padding-top: 3%;
+    font-family: sans-serif;
+  
+  }
+  
+  .headings2 {
+    text-align: center;
+    font-family: sans-serif;
+  
+  }
+
+  .gallcontent{
+
+    background-color: rgb(227, 223, 223) ;
+    color: rgba(0,0,0,.5)!important;
+    padding: 1px;
+    text-align: center;
+    margin-top: 2px;
+    margin-bottom: 20px;
+
+  }
+
+  .footer{
+    text-align: center;
+    background-color:white;
+    padding-top: 20px;
+    
 }
 
-/* .container img {vertical-align: middle;} */
-
-.container .content2 {
-  position: absolute;
-  bottom: 0;
-  background: rgb(0, 0, 0); /* Fallback color */
-  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
-  color: #f1f1f1;
-  width: 98%;
-  padding: 40px;
+.icons{
+  color: rgba(0,0,0,.5);
+ font-size: 32px;
+ padding-top: 20px;
+ padding-bottom: 20px;
+ margin-left: 20px;
+margin-right: 20px;
 }

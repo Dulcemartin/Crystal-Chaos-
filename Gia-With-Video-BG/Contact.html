@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crystal Chaos Contact</title>
+  
+  <link rel="stylesheet" href="contact.css">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Raleway:ital,wght@0,100;1,100&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body class="bgImage">
+    <nav class="navbar sticky-top">
+        <div class="container-fluid ">
+          <a class="navbar-brand p-2" href="#"><img src="Assets/logo.png" alt="logo" height="150"></a>
+          <ul class=" nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link active text-black-50" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-black-50 " aria-current="page" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-black-50" aria-current="page" href="library.html">Library</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-black-50" aria-current="page" href="Contact.html">Contact</a>
+          </ul>
+        </div>
+      </nav>
+    
+
+  <header id="headercontact">
+
+    <br /><br /><br />
+
+    
+
+
+  </header>
+ 
+  <!-- <video class="fullscreen" src="./Video_of_Black_Cat.mp4" playinline autoplay muted loop></video> -->
+<!---->
+  <!-- <nav id="navbar1">
+    <a style="text-decoration: none;" href="index.html" id="navbarhome">Home</a>
+    <a style="text-decoration: none;" href="aboutme.html" target="blank" id="aboutme">Aboutme</a>
+    <a style="text-decoration: none;" href="library.html" target="blank" id="library">Library</a>
+    <a style="text-decoration: none;" href="contact.html" target="blank" id="navbarcontact">Contact</a> -->
+
+
+
+
+
+    <div class="form">
+  <p class="fillform">
+    <h3>Thank you for Visiting Crystal Chaos! <br>
+    Please fill out the form below to get in touch with me!</h3>
+  </p> <br />
+
+  
+
+    <form id="contactform">
+      <label for="name">Name</label>
+      <input type="text" name="name" /> <br />
+<br/>
+      <label for="email">Email</label>
+      <input type="email" name="email"> <br /><br />
+
+      <label for="comments">Comments: </label><br /> <br />
+
+      <textarea id="comments" name="comments" cols="40" rows="8" maxlength="300">Type here
+
+    </textarea><br /> <br />
+
+
+      <p class="questioncontact">Can we contact you?</p>
+      <input type="radio" id="yes" name="contact-back" value="yes">
+      <label for="yes">Yes</label>
+      <input type="radio" id="no" value="no" name="contact-back">
+      <label for="no">No</label> <br /> <br />
+
+
+
+
+      <button id="submitbutton">Submit</button>
+
+
+
+    </form>
+
+
+  </div>
+
+  <button onclick="popUp()"> Click me</button>
+
+
+</div>
+
+  <script>
+    function popUp() {
+      let person = prompt("please enter you name");
+
+      let greeting = "";
+
+      let time = new Date().getHours();
+      console.log("It is " + time);
+
+
+      if (time < 6) {
+        greeting = "Good Morning, ";
+        console.log(greeting);
+      }
+      else if (time < 18) {
+        greeting = "Good Afternoon, ";
+        console.log(greeting);
+      }
+
+      else {
+        greeting = " Good Evening, ";
+        console.log(greeting);
+      }
+      alert(greeting + person + "!" + "\n Thank you for visiting Crystal Chaos! ");
+    }
+
+  </script>
+
+  <table id="references"></table>
+
+
+
+
+
+  <script>
+
+    let text = "<tr><th>Name</th><th>Email</th></tr>";
+    var people = [
+      { name: "Angie", email: "dolphins272@msn.com" },
+
+    ];
+    for (let i = 0; i < people.length; i++) {
+      text += "<tr><td>" + people[i].name + "</td><td> " + people[i].email + "</td></tr>";
+    }
+    document.getElementById("references").innerHTML = text;
+
+
+  </script>
+  <script>
+    function myFunction() {
+      const message = document.getElementById("p01");
+      message.innerHTML = "";
+      let x = document.getElementById("demo").value;
+      try {
+        if (x == "") throw "empty";
+        if (isNaN(x)) throw "not a number";
+        x = Number(x);
+        if (x < 5) throw "too low";
+        if (x > 10) throw "too high";
+      }
+      catch (err) {
+        message.innerHTML = "Input is " + err;
+      }
+    }
+  </script>
+
+
+</body>
+
+</html>
