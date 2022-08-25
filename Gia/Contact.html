@@ -16,11 +16,15 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Raleway:ital,wght@0,100;1,100&display=swap"
     rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5da8a93997.js" crossorigin="anonymous"></script>
 
 </head>
 
-<body>
-    <nav class="navbar sticky-top">
+<body class="bodybackground">
+    <nav class="navbar">
         <div class="container-fluid ">
           <a class="navbar-brand p-2" href="#"><img src="Assets/logo1.png" alt="logo" height="150"></a>
           <ul class=" nav mx-auto">
@@ -44,7 +48,7 @@
 
     <br /><br /><br />
 
-    <h1 id="contact">Contact</h1>
+    
 
 
   </header>
@@ -61,7 +65,7 @@
 
 
 
-  <p class="fillform">
+  <p class="fillform"> 
     Thank you for Visiting Crystal Chaos! <br>
     Please fill out the form below to get in touch with me!
   </p> <br />
@@ -71,6 +75,7 @@
     <form id="contactform">
       <label for="name">Name</label>
       <input type="text" name="name" /> <br />
+      <br/>
 
       <label for="email">Email</label>
       <input type="email" name="email"> <br /><br />
@@ -100,12 +105,15 @@
 
   </div>
 
-  <button onclick="popUp()"> Click me</button>
+  <br/> <br/>
+
+
+  <!-- <button onclick="popUp()"> Click me</button> -->
 
 
 
 
-  <script>
+  <!-- <script>
     function popUp() {
       let person = prompt("please enter you name");
 
@@ -133,13 +141,13 @@
 
   </script>
 
-  <table id="references"></table>
+  <table id="references"></table> -->
 
 
 
 
 
-  <script>
+  <!-- <script>
 
     let text = "<tr><th>Name</th><th>Email</th></tr>";
     var people = [
@@ -149,27 +157,33 @@
     for (let i = 0; i < people.length; i++) {
       text += "<tr><td>" + people[i].name + "</td><td> " + people[i].email + "</td></tr>";
     }
-    document.getElementById("references").innerHTML = text;
+    document.getElementById("references").innerHTML = text; -->
+
+
 
 
   </script>
   <script>
-    function myFunction() {
-      const message = document.getElementById("p01");
-      message.innerHTML = "";
-      let x = document.getElementById("demo").value;
-      try {
-        if (x == "") throw "empty";
-        if (isNaN(x)) throw "not a number";
-        x = Number(x);
-        if (x < 5) throw "too low";
-        if (x > 10) throw "too high";
-      }
-      catch (err) {
-        message.innerHTML = "Input is " + err;
-      }
-    }
-  </script>
+  //   function myFunction() {
+  //     const message = document.getElementById("p01");
+  //     message.innerHTML = "";
+  //     let x = document.getElementById("demo").value;
+  //     try {
+  //       if (x == "") throw "empty";
+  //       if (isNaN(x)) throw "not a number";
+  //       x = Number(x);
+  //       if (x < 5) throw "too low";
+  //       if (x > 10) throw "too high";
+  //     }
+  //     catch (err) {
+  //       message.innerHTML = "Input is " + err;
+  //     }
+  //   }
+  // </script>
+
+<footer class="footer">
+  
+</footer>
 
 
 
