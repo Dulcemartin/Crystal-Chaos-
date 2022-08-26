@@ -1,36 +1,8 @@
 body {
-    background-color: rgb(196, 157, 170);
+    background-image: url);
     background-repeat: no-repeat;
     background-size: cover;
     object-fit: cover;
-
-}
-
-.bodybackground {
-    background-image: url(./20220801_163032\ 2.jpg);
-
-}
-
-.fillform {
     text-align: center;
 
-
-
-
-}
-
-#contactform {
-    text-align: center;
-
-
-
-
-}
-
-
-.footer {
-    background-color: white;
-    color: white;
-    padding-top: 5%;
-    padding-bottom: 5%;
 }
