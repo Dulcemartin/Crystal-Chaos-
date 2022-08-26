@@ -1,8 +1,9 @@
 body {
-    background-image: url(Assets/crystal20\ copy.jpg);
+    background-color: whitesmoke;
     background-repeat: no-repeat;
     background-size: cover;
     object-fit: cover;
+    text-align: center;
     
 } 
 
