@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
+
+header .logo {
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.imgbord {
+  border: 5px solid #C4AEAF;
+  border-width: 10px;
+  border-image: none;
+
+}
+
+.padding {
+  padding-top: 50px;
+}
+
+
+.bg-image-full {
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center;
+  background-size: cover;
+  height: 10px;
+
+}
+
+.footer {
+  text-align: center;
+  background-color: white;
+  padding-top: 20px;
+
+}
+
+.icons {
+  color: rgba(0, 0, 0, .5);
+  font-size: 32px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.text h2 {
+  font-size: 5em;
+  font-weight: 500;
+  color: #fff;
+  line-height: 1em;
+  text-transform: none;
+}
+
+.text h3 {
+  font-size: 4em;
+  font-weight: 300;
+  color: #fff;
+  line-height: 1em;
+  text-transform: full-width;
+}
+
+.text p {
+  font-size: 1.1em;
+  color: #fff;
+  margin: 20px 0;
+  font-weight: 400;
+  max-width: 700px;
+}
