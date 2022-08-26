@@ -14,10 +14,20 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="library.css">
+ 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
+    <link rel="stylesheet" href="contact.css">
+    <style>
+    body{
+      background-image: url("/Dulce/Assets/pexels-olha-ruskykh-6954558.jpg");
+      color:white;
+    }
+
+
+
+    </style>
     </head>
 
     <!-- BODY -->
@@ -27,7 +37,7 @@
           <header>
             <nav class="navbar">
               <div class="container-fluid ">
-                <a class="navbar-brand p-2" href="#"><img src="Crystalpictures/logo1.png" alt="logo" height="150"></a>
+                <a class="navbar-brand p-2" href="#"><img src="/Dulce/Assets/logo1.png" alt="logo" height="150"></a>
                 <ul class=" nav mx-auto">
                   <li class="nav-item">
                     <a class="nav-link active text-black-50" aria-current="page" href="index.html">Home</a>
@@ -53,153 +63,89 @@
 
     <br /><br /><br />
 
-    <h1 id="contact">Contact</h1>
+    <div>
+    <h3>Thank you for Visiting Crystal Chaos! <br>
+    Please fill out the form below to get in touch with me!</h3>
+            </div><br>
 
+            <?php
+		$name = $email = $contBack = $comment = "";
 
-  </header>
- 
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+			$name = cleanInput($_POST["name"]);
+			$email = cleanInput($_POST["email"]);
+			$contBack = cleanInput($_POST["contact-back"]);
+			$comment = cleanInput($_POST["comments"]);
+		}
 
+        function cleanInput($data) {
+			//POSSIBLE SOLUTION FOR STEP 2
+			$data = trim($data);
+			$data = stripslashes($data);
+			$data = htmlspecialchars($data);
+			//SOLUTION FOR STEP 3
+			return $data;
+		}
+	?>
 
-
-    <?php
-            // define variables and set to empty values
-            $nameErr = $emailErr = $commentsErr = $contactErr = "";
-            $name = $email = $comments = $contact = $comments = "";
-            $to = $message = $headers = "";
-
-            if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-            if (empty($_POST["name"])) {
-            $nameErr = "Name is required";
-            } else {
-            $name = test_input($_POST["name"]);
-            // check if name only contains letters and whitespace
-            if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
-            $nameErr = "Only letters and white space allowed";
-            }
-            }
+       
             
-            if (empty($_POST["email"])) {
-            $emailErr = "Email is required";
-            } else {
-            $email = test_input($_POST["email"]);
-            // check if e-mail address is well-formed
-            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            $emailErr = "Invalid email format";
-            }
-            }
-            
-            if (empty($_POST["website"])) {
-            $website = "";
-            } else {
-            $website = test_input($_POST["website"]);
-            // check if URL address syntax is valid (this regular expression also allows dashes in the URL)
-            if (!preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i",$website)) {
-            $websiteErr = "Invalid URL";
-            }
-            }
+ <div>
+ <form action=<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?> method="POST">
+<form style="text-align: center;" >
+    <label>Name:</label>
+    <input type="text" name="name"> <br><br>
 
-            if (empty($_POST["comment"])) {
-            $comment = "";
-            } else {
-            $comment = test_input($_POST["comment"]);
-            }
+<label>Email:</label>
+<input required type="email" name="email"><br><br>
 
-            if (empty($_POST["May we Contact you?"])) {
-            $superheroErr = "";
-            } else {
-            $superhero = test_input($_POST["May we contact you?"]);
-            }
-            }
-
-            function test_input($data) {
-            $data = trim($data);
-            $data = stripslashes($data);
-            $data = htmlspecialchars($data);
-            return$data;
-            }
-?>
-
-    
-
-    <p>
-        <span class="error">* required field</span>
-    </p>
-
-    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-
-        Name: <input type="text" name="name" value="<?php echo $name;?>">
-
-        <span class="error">* <?php echo $nameErr;?></span>
-
+<label for ="Comments">Comments:</label><br>
+    <textarea id="comments"
+            name="comments"
+            cols="40"
+            rows="4"
+            maxlengt="250"></textarea>
+       
         <br><br>
 
-        E-mail: <input type="text" name="email" value="<?php echo $email;?>">
+        May I contact you back?<br>
+        <br>
 
-        <span class="error">* <?php echo $emailErr;?></span>
+        <input type="radio" id="Yes" name="Contactback">
+        <label for ="yes">Yes</label>
+        <input type="radio" id="No" name="Contactback">
+        <label for ="no">No</label><br>
+<br>
+        <div>
 
-        <br><br>
+           <input type ="submit" value="Submit">
 
+        </div>
+        <?php if ($_SERVER["REQUEST_METHOD"] == "POST") { ?>
+	
+	<section id="results" style="background-color: lightsteelblue;">
+		<div class="container py-2" >
+			<div class="row ">
+				<h1>Form Entries:</h1>
+			</div>
+			<div class="row">				
+				<ul>
+					<?php
+					if ($name !== "") { echo "<li>NAME: $name </li>"; } 
+					if ($email !== "") { echo "<li>EMAIL: $email </li>"; }
+					if ($contBack !== "") { echo "<li>CONTACT BACK: $contBack </li>"; }
+					if ($comment !== "") { echo "<li>COMMENT: $comment </li>"; }
+					?>
+				</ul>		
+			</div>
+		</div>
+</form>
+<?php } ?>
+</div>
 
-        Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
+<br>
 
-        <br><br>
-
-       May we contact you?
-
-        <input type="radio" name="contact" <?php if (isset($superhero) && $superhero=="superman") echo "checked";?> value="superman">
-
-       Yes
-
-        <input type="radio" name="Yes" <?php if (isset($superhero) && $superhero=="Yes") echo "checked";?> value="Yes">
-        
-        No
-
-        <input type="radio" name="No" <?php if (isset($superhero) && $superhero=="No") echo "checked";?> value="No">
-        
-      
-
-        <span class="error">* <?php echo $superheroErr;?></span>
-
-        <br><br>
-
-        <input type="submit" name="submit" value="Submit">
-
-        
-
-    </form>
-
-
-
-    <?php
-
-            echo "<h2>Your Input:</h2>";
-            echo $name;
-            echo "<br>";
-            echo $email;
-            echo "<br>";
-            echo $comment;
-            echo "<br>";
-            echo $contact;
-            echo "<br>";
-
-            if (isset($_POST["submit"])){
-            $to = " dulruiz86@gmail.com, dulruiz86@gmail.com ";
-            $headers = "From: $email \r\n";
-            $headers .= "Reply-To: $email \r\n";
-            $headers .= "Cc: dulruiz86@gmail.com\r\n";
-            $headers .= "Bcc: dulruiz86@gmail.com \r\n";
-            $headers .= "X-Mailer: PHP/" . phpversion();
-
-            $email_body = "You have received a new message from the $name.\n"."Their name $name.\n"."Their email is $email.\n"."They comment:\n $comment.";
-
-            //mail(param1,param2,param3,param4...)
-            mail($to, " Website Request ", $email_body, $headers);
-            
-            echo "Thank you for contacting us. We will be in touch with you very soon.";
-            }
-    ?>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 
 </html>
