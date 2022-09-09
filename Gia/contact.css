@@ -3,6 +3,30 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     object-fit: cover;
+<<<<<<< HEAD
+=======
+    
+} 
+
+.bodybackground {
+    background-image: url(./20220801_1630322.jpg);
+  
+}
+
+.fillform{
+text-align: center;
+
+
+
+    
+}
+
+#contactform {
+>>>>>>> cf5b788c7d6e279c49fe84af53a163dd5439995c
     text-align: center;
 
+<<<<<<< HEAD
 }
+=======
+
+>>>>>>> cf5b788c7d6e279c49fe84af53a163dd5439995c
